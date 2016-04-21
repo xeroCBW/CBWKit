@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+CBWFrame.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    //frame 使用实例
+    
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor redColor];
+    view.x = 100;
+    view.y = 100;
+    view.width = 100;
+    view.height = 100;
+    [self.view addSubview:view];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
