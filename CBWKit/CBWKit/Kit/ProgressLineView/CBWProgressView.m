@@ -7,7 +7,8 @@
 //
 
 #import "CBWProgressView.h"
-#import "UIColor+BFPaperColors.h"
+
+
 @interface CBWProgressView ()
 
 /** 进度条*/
@@ -16,10 +17,22 @@
 @end
 
 @implementation CBWProgressView
+
+- (CBWProgressView *)initProgressViewWithFrame:(CGRect )frame withRoundCorner:(BOOL )isRoundCorner withBackgroupColor:(UIColor *)backgroundColor withProgressColor:(UIColor *)progressColor{
+    
+    
+    
+    return self;
+    
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        self.layer.cornerRadius = self.frame.size.height * 0.5;
+        self.layer.masksToBounds = YES;
         
         CGRect  viewFrame = CGRectMake(0, 0, 0, frame.size.height);
         UIView *view = [[UIView alloc]initWithFrame:viewFrame];
@@ -38,31 +51,36 @@
     UIView *view = [[UIView alloc]initWithFrame:viewFrame];
     [self addSubview:view];
     view.backgroundColor = [UIColor clearColor];
-//    view.layer.cornerRadius = self.frame.size.height * 0.5;
-//    view.layer.masksToBounds = YES;
     
     self.progressView = view;
 }
 
 
--(void)setProgress:(CGFloat)progress{
-    
+- (void)setProgress:(CGFloat)progress{
     _progress = progress;
-    if (progress == 0) {
+    
+    NSLog(@"%f",self.bounds.size.height);
+    
+    CGRect frame = CGRectMake(0, 0, self.bounds.size.width * self.progress, self.bounds.size.height);
+    
+    [UIView animateWithDuration:5 animations:^{
+        
+        self.progressView.frame = frame;
+        
+    }];
+
+}
+
+- (void)setProgressViewColor:(UIColor *)progressViewColor{
+    _progressViewColor = progressViewColor;
+    
+    if (_progressViewColor == nil) {
         self.progressView.backgroundColor = [UIColor clearColor];
     }else{
-        self.progressView.backgroundColor = [UIColor colorWithHexString:@"#a8d2ff"];
-       
-        CGRect frame = CGRectMake(0, 0, self.frame.size.width * progress, self.frame.size.height);
-        
-        [UIView animateWithDuration:1.5 animations:^{
-            
-            self.progressView.frame = frame;
-            
-        }];
-
+        self.progressView.backgroundColor = self.progressViewColor;
     }
     
+   
 }
 
 

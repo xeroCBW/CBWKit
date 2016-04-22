@@ -11,5 +11,9 @@
 @interface CBWProgressView : UIView
 /** 进度(0~1)*/
 @property (nonatomic ,assign) CGFloat progress;
+/** 颜色,进度为0的时候默认为 clearColor*/
+@property (nonatomic ,strong) UIColor *progressViewColor;
+
+- (CBWProgressView *)initProgressViewWithFrame:(CGRect )frame withRoundCorner:(BOOL )isRoundCorner withBackgroupColor:(UIColor *)backgroundColor withProgressColor:(UIColor *)progressColor;
 
 @end

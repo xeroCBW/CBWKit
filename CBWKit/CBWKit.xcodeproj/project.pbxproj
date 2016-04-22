@@ -16,6 +16,7 @@
 		D07F28FA1CC87BA200C159FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07F28F91CC87BA200C159FE /* Assets.xcassets */; };
 		D07F28FD1CC87BA200C159FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07F28FB1CC87BA200C159FE /* LaunchScreen.storyboard */; };
 		D07F29081CC87C8000C159FE /* UIView+CBWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */; };
+		D0D534A81CC9C0BA00C1D554 /* UIColor+CBWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */; };
 		FDB8E64F39A1717CCDDE870F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD16603209BE045C0FA100E1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		D07F28FE1CC87BA200C159FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D07F29061CC87C8000C159FE /* UIView+CBWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CBWFrame.h"; sourceTree = "<group>"; };
 		D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CBWFrame.m"; sourceTree = "<group>"; };
+		D0D534A61CC9C0BA00C1D554 /* UIColor+CBWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CBWColor.h"; sourceTree = "<group>"; };
+		D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CBWColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		D07F29041CC87C5B00C159FE /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				D0D534A51CC9C09900C1D554 /* UIColor */,
 				D042A3001CC9BB9100A0C2B7 /* ProgressLineView */,
 				D031E72C1CC8BDD300C4F0DA /* InfiniteScrollview */,
 				D07F29051CC87C5B00C159FE /* Frame */,
@@ -132,6 +136,15 @@
 				D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */,
 			);
 			path = Frame;
+			sourceTree = "<group>";
+		};
+		D0D534A51CC9C09900C1D554 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				D0D534A61CC9C0BA00C1D554 /* UIColor+CBWColor.h */,
+				D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		E7E3D63C4CC071F4241CC230 /* Pods */ = {
@@ -278,6 +291,7 @@
 				D031E72F1CC8BE0200C4F0DA /* CBWInfiniteBanner.m in Sources */,
 				D07F28EF1CC87BA200C159FE /* main.m in Sources */,
 				D07F29081CC87C8000C159FE /* UIView+CBWFrame.m in Sources */,
+				D0D534A81CC9C0BA00C1D554 /* UIColor+CBWColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UIView+CBWFrame.h"
 #import "CBWInfiniteBanner.h"
+#import "CBWProgressView.h"
+#import "UIColor+CBWColor.h"
 
 @interface ViewController ()
 
@@ -23,7 +25,6 @@
     [super viewDidLoad];
 
     //frame 使用实例
-    
     UIView *view = [[UIView alloc]init];
     view.backgroundColor = [UIColor redColor];
     view.x = 100;
@@ -50,6 +51,17 @@
     };
     
     [self.view addSubview:banner];
+    
+    
+    //设置进度条
+    CGRect frame = CGRectMake(0, 20, 200, 40);
+    CBWProgressView *progressView = [[CBWProgressView alloc]initWithFrame:frame];
+    
+    progressView.backgroundColor = [UIColor greenColor];
+    progressView.progressViewColor = [UIColor redColor];
+    progressView.progress = 0.8;
+    
+    [self.view addSubview:progressView];
 }
 
 
