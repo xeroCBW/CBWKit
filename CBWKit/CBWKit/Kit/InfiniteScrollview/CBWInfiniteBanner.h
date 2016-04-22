@@ -19,5 +19,5 @@
 //点击事件的 block 或者 delegate
 
 /** 点击事件的 block*/
-@property (nonatomic ,copy) void(^block)(NSInteger index);
+@property (nonatomic ,copy) void(^block)(NSUInteger index);
 @end

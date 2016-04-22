@@ -16,6 +16,8 @@
 @property (nonatomic, weak) UIPageControl *pageControl;
 /** timer */
 @property (nonatomic, weak) NSTimer *timer;
+/** 记录当前选中的图片 index*/
+@property (nonatomic ,assign) NSUInteger index;
 @end
 @implementation CBWInfiniteBanner
 /** imageView的数量 */
@@ -38,6 +40,7 @@ static NSUInteger const CBWImageViewCount = 3;
         // 3个UIImageView
         for (NSUInteger i = 0; i < CBWImageViewCount; i++) {
             UIImageView *imageView = [[UIImageView alloc] init];
+            
             [scrollView addSubview:imageView];
         }
         
@@ -130,12 +133,29 @@ static NSUInteger const CBWImageViewCount = 3;
         
         // 绑定图片索引到UIImageView的tag
         imageView.tag = imageIndex;
+        
+        //给中间图片添加 tap 手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+        if (i == 1 ) {
+            self.index = imageView.tag;
+            imageView.userInteractionEnabled = YES;
+            [imageView addGestureRecognizer:tap];
+        }
+
+
     }
     
     // 2.重置UIScrollView的contentOffset.width == 1倍宽度
     self.scrollView.contentOffset = CGPointMake(self.scrollView.frame.size.width, 0);
 }
 
+
+- (void)tapAction:(UITapGestureRecognizer *)tap{
+    NSLog(@"===%ld===",self.index);
+    if (self.block) {
+        self.block(self.index);
+    }
+}
 
 #pragma mark - <UIScrollViewDelegate>
 /**
