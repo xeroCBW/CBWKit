@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  CBWKit
+//  模仿按下去小,恢复就变成原来大小
 //
-//  Created by 陈博文 on 16/4/21.
+//  Created by 陈博文 on 16/4/19.
 //  Copyright © 2016年 陈博文. All rights reserved.
 //
 
