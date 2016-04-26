@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "CBWPayView.h"
 @interface ViewController ()
 
 @end
@@ -16,12 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+}
+- (IBAction)buttonClick:(id)sender {
+    
+    CBWPayView *view = [[CBWPayView alloc]init];
+    
+    [view show];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

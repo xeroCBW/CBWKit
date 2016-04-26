@@ -10,4 +10,9 @@
 
 @interface CBWPayView : UIView
 
+/** containerView*/
+@property (nonatomic ,strong) UIScrollView *containerView;
+- (instancetype)init;
+- (void)show;
+- (void)dismiss;
 @end

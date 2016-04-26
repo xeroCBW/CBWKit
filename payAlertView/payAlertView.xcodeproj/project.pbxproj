@@ -13,6 +13,7 @@
 		D0DD87BD1CCF64FC00DDB8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DD87BB1CCF64FC00DDB8CE /* Main.storyboard */; };
 		D0DD87BF1CCF64FC00DDB8CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DD87BE1CCF64FC00DDB8CE /* Assets.xcassets */; };
 		D0DD87C21CCF64FC00DDB8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DD87C01CCF64FC00DDB8CE /* LaunchScreen.storyboard */; };
+		D0DD87CB1CCF652800DDB8CE /* CBWPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD87CA1CCF652800DDB8CE /* CBWPayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		D0DD87BE1CCF64FC00DDB8CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DD87C11CCF64FC00DDB8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DD87C31CCF64FC00DDB8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0DD87C91CCF652800DDB8CE /* CBWPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWPayView.h; sourceTree = "<group>"; };
+		D0DD87CA1CCF652800DDB8CE /* CBWPayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWPayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				D0DD87B91CCF64FC00DDB8CE /* ViewController.m */,
 				D0DD87BB1CCF64FC00DDB8CE /* Main.storyboard */,
 				D0DD87BE1CCF64FC00DDB8CE /* Assets.xcassets */,
+				D0DD87C91CCF652800DDB8CE /* CBWPayView.h */,
+				D0DD87CA1CCF652800DDB8CE /* CBWPayView.m */,
 				D0DD87C01CCF64FC00DDB8CE /* LaunchScreen.storyboard */,
 				D0DD87C31CCF64FC00DDB8CE /* Info.plist */,
 				D0DD87B21CCF64FC00DDB8CE /* Supporting Files */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DD87CB1CCF652800DDB8CE /* CBWPayView.m in Sources */,
 				D0DD87BA1CCF64FC00DDB8CE /* ViewController.m in Sources */,
 				D0DD87B71CCF64FC00DDB8CE /* AppDelegate.m in Sources */,
 				D0DD87B41CCF64FC00DDB8CE /* main.m in Sources */,
