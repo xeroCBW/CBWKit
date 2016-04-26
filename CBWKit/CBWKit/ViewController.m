@@ -11,6 +11,7 @@
 #import "CBWInfiniteBanner.h"
 #import "CBWProgressView.h"
 #import "UIColor+CBWColor.h"
+#import "CBWCenterView.h"
 
 @interface ViewController ()
 
@@ -62,9 +63,17 @@
     progressView.progress = 0.8;
     
     [self.view addSubview:progressView];
+    
+    
+    
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    //显示提示框
+    CBWCenterView *alertView = [[CBWCenterView alloc]init];
+    alertView.buttonTitles = @[@"第一个",@"第二个",@"第三个"];
+    [alertView show];
+}
 #pragma mark - setter && getter
 - (NSMutableArray *)array{
     if (_array == nil) {

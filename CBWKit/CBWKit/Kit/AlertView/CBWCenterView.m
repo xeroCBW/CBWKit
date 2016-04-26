@@ -30,10 +30,14 @@ static float const buttonHeight  = 30.0;
 - (void) creatContainerView{
     
     if (self.containerView == nil) {
-        self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 150)];
+        self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
         self.containerView.layer.cornerRadius = kCBWAlertViewCornerRadius;
         self.containerView.layer.masksToBounds = YES;
     }
+    
+    //重新设置尺寸,增加下面 button 的位置
+    [self resizeFrameContainerView:self.containerView];
+    
     self.containerView.center = self.center;
     self.containerView.backgroundColor = [UIColor yellowColor];
     [self addSubview:self.containerView];
@@ -45,11 +49,20 @@ static float const buttonHeight  = 30.0;
     
     CGFloat buttonWidth = container.bounds.size.width / [self.buttonTitles count];
     
+    //设置横线
+//    CGRect frame = CGRectMake(0,container.bounds.size.height - buttonHeight - 1, container.bounds.size.width, 1);
+//    UIView *view = [[UIView alloc]initWithFrame:frame];
+//    view.backgroundColor = [UIColor grayColor];
+//    [container addSubview:view];
+    
+//    NSLog(@"%@",NSStringFromCGRect(frame));
+    
     for (int i=0; i<[self.buttonTitles count]; i++) {
         
         UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [closeButton setFrame:CGRectMake(i * buttonWidth, container.bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
+        
         
         [closeButton addTarget:self action:@selector(alertDialogButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [closeButton setTag:i];
@@ -58,8 +71,8 @@ static float const buttonHeight  = 30.0;
         [closeButton setTitleColor:[UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f] forState:UIControlStateNormal];
         [closeButton setTitleColor:[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:0.5f] forState:UIControlStateHighlighted];
         [closeButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-        [closeButton.layer setCornerRadius:kCBWAlertViewCornerRadius];
         closeButton.backgroundColor = randomColor;
+        closeButton.layer.cornerRadius = kCBWAlertViewCornerRadius;
         [container addSubview:closeButton];
     }
 }
@@ -68,6 +81,15 @@ static float const buttonHeight  = 30.0;
     
 //    NSLog(@"%ld",(long)button.tag);
     self.buttonClickActionBlock(self,button.tag);
+    
+}
+
+
+- (void)resizeFrameContainerView:(UIView *)containerView{
+    
+    CGRect frame = containerView.frame;
+    frame = CGRectMake(0, 0, frame.size.width, frame.size.height + buttonHeight);
+    containerView.frame = frame;
     
 }
 

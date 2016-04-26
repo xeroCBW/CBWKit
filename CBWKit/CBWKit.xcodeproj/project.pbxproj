@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		D031E72F1CC8BE0200C4F0DA /* CBWInfiniteBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D031E72E1CC8BE0200C4F0DA /* CBWInfiniteBanner.m */; };
 		D042A3031CC9BB9C00A0C2B7 /* CBWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D042A3021CC9BB9C00A0C2B7 /* CBWProgressView.m */; };
+		D043ECCA1CCF3C9E00AE8952 /* CBWCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D043ECC91CCF3C9E00AE8952 /* CBWCenterView.m */; };
 		D07F28EF1CC87BA200C159FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F28EE1CC87BA200C159FE /* main.m */; };
-		D07F28F21CC87BA200C159FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F28F11CC87BA200C159FE /* AppDelegate.m */; };
 		D07F28F51CC87BA200C159FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F28F41CC87BA200C159FE /* ViewController.m */; };
 		D07F28F81CC87BA200C159FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07F28F61CC87BA200C159FE /* Main.storyboard */; };
 		D07F28FA1CC87BA200C159FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07F28F91CC87BA200C159FE /* Assets.xcassets */; };
 		D07F28FD1CC87BA200C159FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07F28FB1CC87BA200C159FE /* LaunchScreen.storyboard */; };
 		D07F29081CC87C8000C159FE /* UIView+CBWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */; };
 		D0D534A81CC9C0BA00C1D554 /* UIColor+CBWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */; };
+		D0DD87A51CCF46B200DDB8CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD87A41CCF46B200DDB8CE /* AppDelegate.m */; };
 		FDB8E64F39A1717CCDDE870F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD16603209BE045C0FA100E1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -28,10 +29,11 @@
 		D031E72E1CC8BE0200C4F0DA /* CBWInfiniteBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWInfiniteBanner.m; sourceTree = "<group>"; };
 		D042A3011CC9BB9C00A0C2B7 /* CBWProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWProgressView.h; sourceTree = "<group>"; };
 		D042A3021CC9BB9C00A0C2B7 /* CBWProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWProgressView.m; sourceTree = "<group>"; };
+		D043ECC81CCF3C9E00AE8952 /* CBWCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWCenterView.h; sourceTree = "<group>"; };
+		D043ECC91CCF3C9E00AE8952 /* CBWCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWCenterView.m; sourceTree = "<group>"; };
 		D07F28EA1CC87BA200C159FE /* CBWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07F28EE1CC87BA200C159FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D07F28F01CC87BA200C159FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D07F28F11CC87BA200C159FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D07F28F31CC87BA200C159FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D07F28F41CC87BA200C159FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D07F28F71CC87BA200C159FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CBWFrame.m"; sourceTree = "<group>"; };
 		D0D534A61CC9C0BA00C1D554 /* UIColor+CBWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CBWColor.h"; sourceTree = "<group>"; };
 		D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CBWColor.m"; sourceTree = "<group>"; };
+		D0DD87A41CCF46B200DDB8CE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,15 @@
 			path = ProgressLineView;
 			sourceTree = "<group>";
 		};
+		D043ECC71CCF3C7100AE8952 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D043ECC81CCF3C9E00AE8952 /* CBWCenterView.h */,
+				D043ECC91CCF3C9E00AE8952 /* CBWCenterView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		D07F28E11CC87BA200C159FE = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D07F28F01CC87BA200C159FE /* AppDelegate.h */,
-				D07F28F11CC87BA200C159FE /* AppDelegate.m */,
+				D0DD87A41CCF46B200DDB8CE /* AppDelegate.m */,
 				D07F28F31CC87BA200C159FE /* ViewController.h */,
 				D07F28F41CC87BA200C159FE /* ViewController.m */,
 				D07F28F61CC87BA200C159FE /* Main.storyboard */,
@@ -120,6 +132,7 @@
 		D07F29041CC87C5B00C159FE /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				D043ECC71CCF3C7100AE8952 /* AlertView */,
 				D0D534A51CC9C09900C1D554 /* UIColor */,
 				D042A3001CC9BB9100A0C2B7 /* ProgressLineView */,
 				D031E72C1CC8BDD300C4F0DA /* InfiniteScrollview */,
@@ -287,8 +300,9 @@
 			files = (
 				D042A3031CC9BB9C00A0C2B7 /* CBWProgressView.m in Sources */,
 				D07F28F51CC87BA200C159FE /* ViewController.m in Sources */,
-				D07F28F21CC87BA200C159FE /* AppDelegate.m in Sources */,
+				D043ECCA1CCF3C9E00AE8952 /* CBWCenterView.m in Sources */,
 				D031E72F1CC8BE0200C4F0DA /* CBWInfiniteBanner.m in Sources */,
+				D0DD87A51CCF46B200DDB8CE /* AppDelegate.m in Sources */,
 				D07F28EF1CC87BA200C159FE /* main.m in Sources */,
 				D07F29081CC87C8000C159FE /* UIView+CBWFrame.m in Sources */,
 				D0D534A81CC9C0BA00C1D554 /* UIColor+CBWColor.m in Sources */,
