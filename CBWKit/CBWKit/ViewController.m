@@ -72,6 +72,13 @@
     //显示提示框
     CBWCenterView *alertView = [[CBWCenterView alloc]init];
     alertView.buttonTitles = @[@"第一个",@"第二个",@"第三个"];
+    alertView.buttonClickActionBlock = ^(CBWCenterView *alertView,NSUInteger index){
+        NSLog(@"%zd",index);
+        
+        //可以更具 index 来设置所需要的操作
+        
+        [alertView dismiss];
+    };
     [alertView show];
 }
 #pragma mark - setter && getter
