@@ -12,6 +12,9 @@
 
 /** containerView*/
 @property (nonatomic ,strong) UIScrollView *containerView;
+
+/** selectedAction*/
+@property (nonatomic ,copy) void (^didSelectedAction)(NSInteger index,NSInteger tag,CBWPayView *view);
 - (instancetype)init;
 - (void)show;
 - (void)dismiss;

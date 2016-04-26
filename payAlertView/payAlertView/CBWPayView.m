@@ -132,6 +132,8 @@ static float const kCBWAlertViewCornerRadius = 3.0;
 }
 #pragma mark - delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  
     NSLog(@"%zd=====%zd",indexPath.row,tableView.tag);
+    self.didSelectedAction(indexPath.row,tableView.tag,self);
 }
 @end
