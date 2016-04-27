@@ -42,6 +42,7 @@
 		D07F28FE1CC87BA200C159FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D07F29061CC87C8000C159FE /* UIView+CBWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CBWFrame.h"; sourceTree = "<group>"; };
 		D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CBWFrame.m"; sourceTree = "<group>"; };
+		D0CA4F011CD04BD40043FC2E /* CBWKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBWKit.h; sourceTree = "<group>"; };
 		D0D534A61CC9C0BA00C1D554 /* UIColor+CBWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CBWColor.h"; sourceTree = "<group>"; };
 		D0D534A71CC9C0BA00C1D554 /* UIColor+CBWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CBWColor.m"; sourceTree = "<group>"; };
 		D0DD87A41CCF46B200DDB8CE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			children = (
 				D07F28EC1CC87BA200C159FE /* CBWKit */,
 				D07F29041CC87C5B00C159FE /* Kit */,
+				D0CA4F001CD04BBE0043FC2E /* Other */,
 				D07F28EB1CC87BA200C159FE /* Products */,
 				E7E3D63C4CC071F4241CC230 /* Pods */,
 				EA869E762DCBAE1455A396E0 /* Frameworks */,
@@ -149,6 +151,15 @@
 				D07F29071CC87C8000C159FE /* UIView+CBWFrame.m */,
 			);
 			path = Frame;
+			sourceTree = "<group>";
+		};
+		D0CA4F001CD04BBE0043FC2E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D0CA4F011CD04BD40043FC2E /* CBWKit.h */,
+			);
+			name = Other;
+			path = CBWKit/Other;
 			sourceTree = "<group>";
 		};
 		D0D534A51CC9C09900C1D554 /* UIColor */ = {
@@ -420,6 +431,8 @@
 			baseConfigurationReference = 20404A0EC50932D538E83413 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CBWKit/Other/CBWKit.h";
 				INFOPLIST_FILE = CBWKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.CBWKit;
@@ -432,6 +445,8 @@
 			baseConfigurationReference = B0693291B1687087FE4620E5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CBWKit/Other/CBWKit.h";
 				INFOPLIST_FILE = CBWKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.CBWKit;

@@ -64,7 +64,7 @@
     
     [self.view addSubview:progressView];
     
-    
+    CBWLog(NSDocumentDirectory)
     
 }
 
