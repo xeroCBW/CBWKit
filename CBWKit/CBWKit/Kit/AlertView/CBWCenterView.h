@@ -14,6 +14,10 @@
 @property (nonatomic ,strong) UIView *containerView;
 /** 底部 button 的 title*/
 @property (nonatomic ,strong) NSArray *buttonTitles;
+/** 提示框的 title*/
+@property (nonatomic ,copy) NSString *title;
+/** 提示框的 message*/
+@property (nonatomic ,copy) NSString *message;
 /** 处理button 点击的block*/
 @property (nonatomic ,strong) void (^buttonClickActionBlock)(CBWCenterView *alertView,NSUInteger index);
 

@@ -12,6 +12,7 @@
 #import "CBWProgressView.h"
 #import "UIColor+CBWColor.h"
 #import "CBWCenterView.h"
+#import "CBWTestVC.h"
 
 @interface ViewController ()
 
@@ -67,20 +68,41 @@
     CBWLog(NSDocumentDirectory)
     
 }
+- (IBAction)buttonclick:(id)sender {
+    
+}
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//上层的 touchBegin 不能响应,下面的就会响应,响应者链条
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     //显示提示框
     CBWCenterView *alertView = [[CBWCenterView alloc]init];
-    alertView.buttonTitles = @[@"第一个",@"第二个",@"第三个"];
+    alertView.buttonTitles = @[@"取消",@"退出企业"];
+    
+    alertView.title = @"退出该企业";
+    alertView.message = @"可以更具 index 来设置所需要的操作可以更";
+    
     alertView.buttonClickActionBlock = ^(CBWCenterView *alertView,NSUInteger index){
         NSLog(@"%zd",index);
         
         //可以更具 index 来设置所需要的操作
         
-        [alertView dismiss];
+        
+        if (index == 0) {
+            //蓝色的,要做操作
+            CBWTestVC *vc = [[CBWTestVC alloc]init];
+            vc.view.backgroundColor = [UIColor redColor];
+            [self presentViewController:vc animated:YES completion:nil];
+            
+        }else{
+            //灰色不操作
+        }
+        [alertView dismiss];//不使用延迟也看不出来
     };
     [alertView show];
+
 }
+
 #pragma mark - setter && getter
 - (NSMutableArray *)array{
     if (_array == nil) {
