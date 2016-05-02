@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D012150E1CD353A1001B8BBF /* CBWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D012150D1CD353A1001B8BBF /* CBWAlertView.m */; };
 		D01BA1301CD26CC50096CC42 /* CBWTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01BA12F1CD26CC50096CC42 /* CBWTestVC.m */; };
 		D031E72F1CC8BE0200C4F0DA /* CBWInfiniteBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D031E72E1CC8BE0200C4F0DA /* CBWInfiniteBanner.m */; };
 		D042A3031CC9BB9C00A0C2B7 /* CBWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D042A3021CC9BB9C00A0C2B7 /* CBWProgressView.m */; };
@@ -26,6 +27,8 @@
 		20404A0EC50932D538E83413 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AD16603209BE045C0FA100E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0693291B1687087FE4620E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D012150C1CD353A1001B8BBF /* CBWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWAlertView.h; sourceTree = "<group>"; };
+		D012150D1CD353A1001B8BBF /* CBWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWAlertView.m; sourceTree = "<group>"; };
 		D01BA12E1CD26CC50096CC42 /* CBWTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWTestVC.h; sourceTree = "<group>"; };
 		D01BA12F1CD26CC50096CC42 /* CBWTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWTestVC.m; sourceTree = "<group>"; };
 		D031E72D1CC8BE0200C4F0DA /* CBWInfiniteBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWInfiniteBanner.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 			children = (
 				D043ECC81CCF3C9E00AE8952 /* CBWCenterView.h */,
 				D043ECC91CCF3C9E00AE8952 /* CBWCenterView.m */,
+				D012150C1CD353A1001B8BBF /* CBWAlertView.h */,
+				D012150D1CD353A1001B8BBF /* CBWAlertView.m */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				D07F28F51CC87BA200C159FE /* ViewController.m in Sources */,
 				D01BA1301CD26CC50096CC42 /* CBWTestVC.m in Sources */,
 				D043ECCA1CCF3C9E00AE8952 /* CBWCenterView.m in Sources */,
+				D012150E1CD353A1001B8BBF /* CBWAlertView.m in Sources */,
 				D031E72F1CC8BE0200C4F0DA /* CBWInfiniteBanner.m in Sources */,
 				D0DD87A51CCF46B200DDB8CE /* AppDelegate.m in Sources */,
 				D07F28EF1CC87BA200C159FE /* main.m in Sources */,

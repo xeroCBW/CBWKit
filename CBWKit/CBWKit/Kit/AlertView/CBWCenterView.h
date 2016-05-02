@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+extern float const kCBWAlertViewCornerRadius;
+extern float const separatorMargin;//iphone6+不会消失
+extern float const normalMargin;
+extern float const lrMargin;
+extern float const titleLabelH;
+extern float const titleLabelBottomMargin;
+extern float const titleFont;
+extern float const messageFont;
+extern float const buttonFont;
+extern float const buttonHeight;
+extern float const showDuring;
+extern float const dismisDuring;
+#define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]
+
 @interface CBWCenterView : UIView
 
 /** containerView*/

@@ -8,18 +8,18 @@
 
 #import "CBWCenterView.h"
 
-static float const kCBWAlertViewCornerRadius  = 10.0;
-static float const separatorMargin = 0.5;//iphone6+不会消失
-static float const normalMargin = 20.0;
-static float const lrMargin = 17.5;
-static float const titleLabelH = 20;
-static float const titleLabelBottomMargin = 10;
-static float const titleFont = 17;
-static float const messageFont = 13.0;
-static float const buttonFont = 17.0;
-static float const buttonHeight  = 45.0;
-static float const showDuring = 0.35f;
-static float const dismisDuring = 0.1f;
+float const kCBWAlertViewCornerRadius  = 10.0;
+float const separatorMargin = 0.5;//iphone6+不会消失
+float const normalMargin = 20.0;
+float const lrMargin = 17.5;
+float const titleLabelH = 20;
+float const titleLabelBottomMargin = 10;
+float const titleFont = 17;
+float const messageFont = 13.0;
+float const buttonFont = 17.0;
+float const buttonHeight  = 45.0;
+float const showDuring = 0.35f;
+float const dismisDuring = 0.1f;
 #define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]
 
 @implementation CBWCenterView
@@ -111,7 +111,7 @@ static float const dismisDuring = 0.1f;
     
     CGFloat buttonWidth = container.bounds.size.width / [self.buttonTitles count];
     
-//    设置横线
+    //设置横线
     CGRect frame = CGRectMake(0,container.bounds.size.height - buttonHeight - separatorMargin, container.bounds.size.width, separatorMargin);
     UIView *view = [[UIView alloc]initWithFrame:frame];
     view.backgroundColor = [UIColor grayColor];
@@ -144,10 +144,10 @@ static float const dismisDuring = 0.1f;
 }
 
 - (void)alertDialogButtonTouchUpInside:(UIButton *)button{
-    
+    __weak typeof(self) weakSelf = self;
 //    NSLog(@"%ld",(long)button.tag);
     self.buttonClickActionBlock(self,button.tag);
-    
+    [weakSelf dismiss];
 }
 
 
