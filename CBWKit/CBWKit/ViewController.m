@@ -104,13 +104,18 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
-    CBWAlertView *view = [[CBWAlertView alloc]initWithTitle:@"我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消" andMessage:@""];
-    [view addButtonWithTitle:@"取消" color:[UIColor grayColor] handler:^(CBWAlertView *alertView) {
+    CBWAlertView *view = [[CBWAlertView alloc]initWithTitle:@"我的" andMessage:@"message...lalalala.....蛮好的,这个不错哒"];
+    
+//    view.titleTextColor = [UIColor redColor];
+//    view.messageTextColor = [UIColor greenColor];
+    
+    [view addButtonWithTitle:@"取消" color:[UIColor lightGrayColor] handler:^(CBWAlertView *alertView) {
         NSLog(@"取消按钮点击");
         NSLog(@"%@",alertView);
     }];
     
-    [view addButtonWithTitle:@"确定" color:[UIColor blueColor] handler:^(CBWAlertView *alertView) {
+    UIColor *color = [UIColor colorWithRed:0 green:118.0/255.0 blue:255.0/255.0 alpha:1.0];
+    [view addButtonWithTitle:@"确定" color:color handler:^(CBWAlertView *alertView) {
         NSLog(@"确定按钮点击");
         NSLog(@"%@",alertView);
     }];

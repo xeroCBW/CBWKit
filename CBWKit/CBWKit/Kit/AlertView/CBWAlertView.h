@@ -14,6 +14,10 @@ typedef void(^CBWAlertViewHandler)(CBWAlertView *alertView);
 
 /** containerView*/
 @property (nonatomic ,strong) UIView *containerView;
+/** titleTextColor*/
+@property (nonatomic ,strong) UIColor *titleTextColor;
+/** messageTextColor*/
+@property (nonatomic ,strong) UIColor *messageTextColor;
 /** 处理button 点击的block*/
 @property (nonatomic ,strong) void (^buttonClickActionBlock)(CBWAlertView *alertView,NSUInteger index);
 - (instancetype)initWithTitle:(NSString *)title andMessage:(NSString *)message;

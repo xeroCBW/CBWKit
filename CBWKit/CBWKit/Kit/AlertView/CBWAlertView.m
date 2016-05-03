@@ -41,7 +41,6 @@
 
 - (instancetype)initWithTitle:(NSString *)title andMessage:(NSString *)message{
     
-    
     self = [super init];
     if (self) {
         _title = title;
@@ -67,7 +66,7 @@
     [self resizeFrameContainerView:self.containerView];
     
     self.containerView.center = self.center;
-    self.containerView.backgroundColor = [UIColor grayColor];
+    self.containerView.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:self.containerView];
 }
 
@@ -75,14 +74,14 @@
     
     CGFloat x = 0;
     CGFloat y = 0;
-    CGFloat w = 250;
+    CGFloat w = 270;
     
     NSString *title = self.title;
     UILabel *titleLabel = [[UILabel alloc]init];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = title;
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:titleFont];
-    //            titleLabel.backgroundColor = [UIColor redColor];
+    titleLabel.textColor = self.titleTextColor;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     CGSize titleSize = [title boundingRectWithSize:CGSizeMake( w - 2*lrMargin, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:titleLabel.font} context:nil].size;
     titleLabel.numberOfLines = 0;
@@ -93,7 +92,7 @@
     // 初始化label
     UILabel *messageLabel = [[UILabel alloc]init];
     messageLabel.textAlignment = NSTextAlignmentCenter;
-    //            messageLabel.backgroundColor = [UIColor yellowColor];
+    messageLabel.textColor = self.messageTextColor;
     // label获取字符串
     messageLabel.text = message;
     // label获取字体
@@ -135,7 +134,7 @@
     //设置横线
     CGRect frame = CGRectMake(0,container.bounds.size.height - buttonHeight - separatorMargin, container.bounds.size.width, separatorMargin);
     UIView *view = [[UIView alloc]initWithFrame:frame];
-    view.backgroundColor = [UIColor grayColor];
+    view.backgroundColor = [UIColor lightGrayColor];
     [container addSubview:view];
     
     
@@ -181,18 +180,18 @@
     [[[[UIApplication sharedApplication] windows] firstObject] addSubview:self];
     
     CASpringAnimation *scale = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
-    scale.mass = 3.0;
+    scale.mass = 3;
     scale.stiffness = 1000.0;
     scale.damping = 500.0;
     scale.fromValue = @(1.2);
     scale.toValue = @(1.0);
-
+    scale.initialVelocity = 0.0;
     
     [self.containerView.layer addAnimation:scale forKey:scale.keyPath];
     
     [UIView animateWithDuration:showDuring delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6f];
+                         self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.4];
                          
                      }
                      completion:nil
