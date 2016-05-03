@@ -57,7 +57,7 @@ float const dismisDuring = 0.1f;
     
     CGFloat x = 0;
     CGFloat y = 0;
-    CGFloat w = 250;
+    CGFloat w = 270;
     
     NSString *title = self.title;
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, w, titleLabelH)];

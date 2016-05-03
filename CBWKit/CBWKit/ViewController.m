@@ -72,24 +72,6 @@
 }
 - (IBAction)buttonclick:(id)sender {
     
-    CBWAlertView *view = [[CBWAlertView alloc]initWithTitle:@"我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消" andMessage:@""];
-    [view addButtonWithTitle:@"取消" color:[UIColor grayColor] handler:^(CBWAlertView *alertView) {
-        NSLog(@"取消按钮点击");
-        NSLog(@"%@",alertView);
-    }];
-    
-    [view addButtonWithTitle:@"确定" color:[UIColor blueColor] handler:^(CBWAlertView *alertView) {
-        NSLog(@"确定按钮点击");
-        NSLog(@"%@",alertView);
-    }];
-    
-    [view show];
-    
-}
-
-//上层的 touchBegin 不能响应,下面的就会响应,响应者链条
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     //显示提示框
     CBWCenterView *alertView = [[CBWCenterView alloc]init];
     alertView.buttonTitles = @[@"取消",@"退出企业"];
@@ -115,6 +97,27 @@
     };
     [alertView show];
 
+}
+
+//上层的 touchBegin 不能响应,下面的就会响应,响应者链条
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+    CBWAlertView *view = [[CBWAlertView alloc]initWithTitle:@"我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消" andMessage:@""];
+    [view addButtonWithTitle:@"取消" color:[UIColor grayColor] handler:^(CBWAlertView *alertView) {
+        NSLog(@"取消按钮点击");
+        NSLog(@"%@",alertView);
+    }];
+    
+    [view addButtonWithTitle:@"确定" color:[UIColor blueColor] handler:^(CBWAlertView *alertView) {
+        NSLog(@"确定按钮点击");
+        NSLog(@"%@",alertView);
+    }];
+    
+    [view show];
+
+   
 }
 
 #pragma mark - setter && getter

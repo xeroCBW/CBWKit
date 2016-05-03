@@ -22,10 +22,16 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
-    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"您还为和hi及覅Hi好是覅恢复ID还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅您还为和hi及覅Hi好是覅恢复ID还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅还为您还为和hi及覅Hi好是覅恢复ID还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅还为您还为和hi及覅Hi好是覅恢复ID还为和hi及覅Hi好是覅还为和hi及覅Hi好是覅还为" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"---=-=-=--=-");
     }];
+    [vc addAction:cancle];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"---=-=-=--=-");
+    }];
+
     
     [vc addAction:ok];
     

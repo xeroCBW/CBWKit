@@ -180,14 +180,20 @@
     
     [[[[UIApplication sharedApplication] windows] firstObject] addSubview:self];
     
-    self.containerView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+    CASpringAnimation *scale = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
+    scale.mass = 3.0;
+    scale.stiffness = 1000.0;
+    scale.damping = 500.0;
+    scale.fromValue = @(1.2);
+    scale.toValue = @(1.0);
+
+    
+    [self.containerView.layer addAnimation:scale forKey:scale.keyPath];
     
     [UIView animateWithDuration:showDuring delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f];
+                         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6f];
                          
-                       self.containerView.transform = CGAffineTransformIdentity;
-                     
                      }
                      completion:nil
      ];
