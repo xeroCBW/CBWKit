@@ -22,7 +22,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
-    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消我的消" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"我的" message:@"消息消息消消息消息消息消息消消息消消息消息消消息消消息消我的消我的消我的消我的消我" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"---=-=-=--=-");
     }];

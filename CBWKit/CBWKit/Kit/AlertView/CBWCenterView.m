@@ -29,7 +29,7 @@ float const dismisDuring = 0.1f;
     self = [super init];
     if (self) {
         self.frame = [UIScreen mainScreen].bounds;
-     
+     self.alpha   = 0.0;
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismiss)];
 //        [self addGestureRecognizer:tap];
     }
@@ -165,17 +165,17 @@ float const dismisDuring = 0.1f;
     
     [self creatContainerView];
     [self addButtonsToView:self.containerView];
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f];
+//        self.containerView.layer.transform = CATransform3DMakeScale(0.0f, 0.0f, 1.0);//设置原先的动画
     
-        self.containerView.layer.transform = CATransform3DMakeScale(0.0f, 0.0f, 1.0);//设置原先的动画
-        
         [[[[UIApplication sharedApplication] windows] firstObject] addSubview:self];
         
         
         [UIView animateWithDuration:showDuring delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f];
+                             self.alpha = 1.0;
                              //设置进来的由大变小的动画
-                             self.containerView.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1);
+//                             self.containerView.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1);
                          }
                          completion:nil
          ];

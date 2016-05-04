@@ -109,10 +109,10 @@
 //    view.titleTextColor = [UIColor redColor];
 //    view.messageTextColor = [UIColor greenColor];
     
-    [view addButtonWithTitle:@"取消" color:[UIColor lightGrayColor] handler:^(CBWAlertView *alertView) {
-        NSLog(@"取消按钮点击");
-        NSLog(@"%@",alertView);
-    }];
+//    [view addButtonWithTitle:@"取消" color:[UIColor lightGrayColor] handler:^(CBWAlertView *alertView) {
+//        NSLog(@"取消按钮点击");
+//        NSLog(@"%@",alertView);
+//    }];
     
     UIColor *color = [UIColor colorWithRed:0 green:118.0/255.0 blue:255.0/255.0 alpha:1.0];
     [view addButtonWithTitle:@"确定" color:color handler:^(CBWAlertView *alertView) {
